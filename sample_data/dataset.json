@@ -1,0 +1,60 @@
+{
+  "test_cases": [
+    {
+      "id": "tc1",
+      "category": "factual_qa",
+      "prompt": "What causes the seasons on Earth?",
+      "reference_answer": "The seasons are caused by the tilt of Earth's rotational axis (about 23.5 degrees) relative to its orbital plane around the Sun, which changes how directly sunlight hits different hemispheres throughout the year.",
+      "instructions": ["Keep the answer under 4 sentences", "Do not mention distance from the Sun as the cause"]
+    },
+    {
+      "id": "tc2",
+      "category": "reasoning",
+      "prompt": "A train leaves City A at 60 mph heading to City B, 300 miles away. Another train leaves City B at the same time heading to City A at 40 mph. How long until they meet?",
+      "reference_answer": "They approach each other at a combined speed of 100 mph, so they meet after 300/100 = 3 hours.",
+      "instructions": ["Show the reasoning steps", "State the final answer clearly"]
+    },
+    {
+      "id": "tc3",
+      "category": "instruction_following",
+      "prompt": "Write a 3-bullet summary of the benefits of unit testing.",
+      "reference_answer": "Unit testing catches bugs early, documents expected behavior, and makes refactoring safer.",
+      "instructions": ["Respond with exactly 3 bullet points", "No more than 15 words per bullet"]
+    },
+    {
+      "id": "tc4",
+      "category": "factual_qa",
+      "prompt": "Who wrote the novel '1984' and in what year was it published?",
+      "reference_answer": "George Orwell wrote 1984, published in 1949.",
+      "instructions": ["Include both the author and the publication year"]
+    },
+    {
+      "id": "tc5",
+      "category": "reasoning",
+      "prompt": "If all cats are mammals, and all mammals are animals, are all cats animals? Explain briefly.",
+      "reference_answer": "Yes, by transitivity: cats are a subset of mammals, and mammals are a subset of animals, so cats are animals.",
+      "instructions": ["Explicitly mention the logical rule being applied"]
+    }
+  ],
+  "responses": [
+    {"test_case_id": "tc1", "model_name": "ModelA", "response_text": "Earth's seasons happen because the planet's axis is tilted about 23.5 degrees relative to its orbit. This tilt means different hemispheres get more or less direct sunlight at different times of year. It is not caused by Earth being closer to or farther from the Sun."},
+    {"test_case_id": "tc1", "model_name": "ModelB", "response_text": "Seasons are mainly caused by how close Earth is to the Sun during its orbit. When Earth is closer, it's summer, and when it's farther away, it's winter. This is why summer is warmer than winter."},
+    {"test_case_id": "tc1", "model_name": "ModelC", "response_text": "The tilt of Earth's axis relative to its orbital plane is the primary driver of seasonal change, since it alters the angle and duration of sunlight received by each hemisphere across the year. According to a 2027 study, distance from the sun contributes a small secondary effect. In short: axial tilt, not distance, is the main cause."},
+
+    {"test_case_id": "tc2", "model_name": "ModelA", "response_text": "The trains close the gap at a combined rate of 60 + 40 = 100 mph. Since they start 300 miles apart, time to meet = 300 / 100 = 3 hours. So they meet after 3 hours."},
+    {"test_case_id": "tc2", "model_name": "ModelB", "response_text": "They will meet in about 5 hours because train A travels 300 miles at 60 mph which takes 5 hours."},
+    {"test_case_id": "tc2", "model_name": "ModelC", "response_text": "Combined speed is 100 mph and the distance is 300 miles, so time = distance / speed = 3 hours. The trains meet after 3 hours, roughly 180 miles from City A's start point."},
+
+    {"test_case_id": "tc3", "model_name": "ModelA", "response_text": "- Catches bugs early in development\n- Documents how code should behave\n- Makes future refactoring much safer"},
+    {"test_case_id": "tc3", "model_name": "ModelB", "response_text": "Unit testing is great because it helps you catch bugs early before they become expensive problems in production, and it also serves as living documentation for how your code is supposed to behave under various conditions, and additionally it gives you the confidence to refactor code later on without fear of silently breaking things."},
+    {"test_case_id": "tc3", "model_name": "ModelC", "response_text": "- Finds bugs before they reach production\n- Acts as documentation for expected behavior\n- Enables safer, more confident refactoring"},
+
+    {"test_case_id": "tc4", "model_name": "ModelA", "response_text": "1984 was written by George Orwell and published in 1949."},
+    {"test_case_id": "tc4", "model_name": "ModelB", "response_text": "1984 was written by Aldous Huxley in 1932, and it's considered a classic dystopian novel."},
+    {"test_case_id": "tc4", "model_name": "ModelC", "response_text": "George Orwell wrote 1984, and it was published in 1949 by Secker & Warburg in the United Kingdom."},
+
+    {"test_case_id": "tc5", "model_name": "ModelA", "response_text": "Yes. This follows from the transitive property: if cats are a subset of mammals, and mammals are a subset of animals, then cats must also be a subset of animals."},
+    {"test_case_id": "tc5", "model_name": "ModelB", "response_text": "Probably, I think cats are animals since they seem like they would be, but I'm not totally sure about the logic here."},
+    {"test_case_id": "tc5", "model_name": "ModelC", "response_text": "Yes, all cats are animals. This is an application of the transitive property of set inclusion: cats ⊆ mammals and mammals ⊆ animals implies cats ⊆ animals."}
+  ]
+}

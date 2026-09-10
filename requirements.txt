@@ -1,0 +1,4 @@
+matplotlib>=3.7
+numpy>=1.24
+anthropic>=0.34   # optional: only needed for --llm-judge mode
+pytest>=7.4        # optional: only needed to run the test suite
