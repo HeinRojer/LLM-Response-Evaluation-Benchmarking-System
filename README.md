@@ -1,8 +1,6 @@
 # LLM-Response-Evaluation-Benchmarking-System
 
 
-# LLM Response Evaluation & Benchmarking System
-
 A Python-based evaluation workflow for benchmarking LLM responses across
 **factual accuracy, relevance, reasoning quality, hallucination risk, and
 instruction adherence** — enabling structured, consistent comparison of
